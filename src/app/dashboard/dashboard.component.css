@@ -1,0 +1,32 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.left{
+    width: 20%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.left h4:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+.left h4{
+    margin:0;
+    padding:20px;
+}
+.logout-button{
+    margin-top: 30px;
+    padding: 10px;
+    width:50%;
+}
+.right{
+    width: 80%;
+    height: 100%;
+    background-color: aqua;
+}
+
