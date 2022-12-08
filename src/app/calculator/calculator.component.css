@@ -1,5 +1,5 @@
 .parent{
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
     background-color: rgba(94, 164, 239, 0.694);
     display: flex;
@@ -12,18 +12,23 @@
     background-color: rgb(192, 184, 184);
     color: white;
     text-align: center;
-    border-radius: 10%;
+    border-radius: 25px;
     font-weight: 500;
  }
  h2{
+    font-size: xx-large;
     color: white;
  }
  input{
     background-color: whitesmoke;
+    border-radius: 5px;
+    border: 1px solid rgb(108, 107, 107);
  }
  button{
     background-color: whitesmoke;
     width: 70px;
     margin: 10px;
     padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(108, 107, 107);
  }
