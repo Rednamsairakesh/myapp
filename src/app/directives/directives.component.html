@@ -14,9 +14,9 @@
     </thead>
     <tbody>
         <tr *ngFor="let user of users">
-            <td>{{user.name}}</td>
-            <td>{{user.age}}</td>
-            <td>{{user.package}}</td>
+            <td>{{user.name |uppercase}}</td>
+            <td [ngClass]="{'red': user.age>0&&user.age<20, 'yellow': user.age>=20&&user.age<30, 'green': user.age>30}">{{user.age}}</td>
+            <td [ngStyle]="{'background-color':user.package<10?'red':'green'}">{{user.package}}</td>
         </tr>
     </tbody>
 </table>
@@ -24,3 +24,10 @@
 <h1 *ngIf="time>=12&&time<16">Good Afternoon</h1>
 <h1 *ngIf="time>=16&&time<20">Good Evening</h1>
 <h1 *ngIf="time>=20&&time<24">Good Night</h1>
+
+<h1>{{today}}</h1>
+<h1>{{today | date}}</h1>
+<h1>{{today | date:'EEEE-yyyy-MM-dd/hh:mm:ss'}}</h1>
+<h1>{{today | date:'short'}}</h1>
+<h1>{{today | date: 'full'}}</h1>
+<h1>{{today | date:'long'}}</h1>
