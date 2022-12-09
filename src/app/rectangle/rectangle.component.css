@@ -1,0 +1,50 @@
+.parent{
+    /* width: 100vw; */
+    height: 100vh;
+    background-color: rgba(67, 112, 160, 0.694);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .child{
+    width: 450px;
+    height:300px;
+    background-color: rgb(203, 176, 176);
+    color: white;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: 500;
+ }
+ h2{
+    font-size: xx-large;
+    color: white;
+ }
+ input{
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border: 1px solid rgb(108, 107, 107);
+ }
+ button{
+    background-color: whitesmoke;
+    width: 70px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(108, 107, 107);
+ }
+ .per{
+    background-color: whitesmoke;
+    width: 100px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(108, 107, 107);
+ }
+ .result{
+    background-color: whitesmoke;
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(108, 107, 107);
+ }
