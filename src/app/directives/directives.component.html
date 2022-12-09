@@ -1,0 +1,26 @@
+<ol>
+    <li *ngFor="let name of names">{{name}}</li>
+</ol>
+<select name="" id="">
+    <option *ngFor="let state of states">{{state}}</option>
+</select>
+<table border="3px solid black">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Package</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.name}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.package}}</td>
+        </tr>
+    </tbody>
+</table>
+<h1 *ngIf="time>0&&time<12">Good Morning</h1>
+<h1 *ngIf="time>=12&&time<16">Good Afternoon</h1>
+<h1 *ngIf="time>=16&&time<20">Good Evening</h1>
+<h1 *ngIf="time>=20&&time<24">Good Night</h1>
