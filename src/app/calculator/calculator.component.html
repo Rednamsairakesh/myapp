@@ -1,11 +1,12 @@
 <div class="parent">
-    <form action="">
+   <div class="child">
         <h2>Calculator</h2>
-        <input type="number"><br><br>
-        <input type="number"><br><br>
-        <button>ADD</button>
-        <button>SUB</button>
-        <button>MUL</button>
-        <button>DIV</button>
-    </form>
+        <input [(ngModel)]="number1" type="number"><br><br>
+        <input [(ngModel)]="number2" type="number"><br><br>
+        <button (click)="add()">ADD</button>
+        <button (click)="sub()">SUB</button>
+        <button (click)="mul()">MUL</button>
+        <button (click)="div">DIV</button><br>
+        <h1>RESULT = {{result}}</h1>
+    </div>
 </div>
