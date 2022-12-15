@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+        <th>Account Name</th>
+        <th>Available Balance</th>
+        <th>Currency</th>
+        <th>User Image</th>
+        <th>Account Number</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let sbibank of sbibank">
+            <td>{{ sbibank.account_name }}</td>
+            <td>{{ sbibank.available_balance }}</td>
+            <td>{{ sbibank.currency }}</td>
+            <td>
+                <img src="{{sbibank.user_image}}" alt="" width="100" height="100">
+            </td>
+            <td>{{ sbibank.account_number }}</td>
+        </tr>
+    </tbody>
+</table>
