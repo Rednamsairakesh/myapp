@@ -1,0 +1,20 @@
+.parent{
+    width: 40%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    display: inline-flex;
+    background-color: white;
+    margin: 10px;
+    border-radius: 10px;
+}
+.image{
+margin: 20px;
+}
+.body{
+    width: 55%;
+    overflow: auto;
+}
+.parent:hover{
+    box-shadow: 0px 0px 5px black;
+}
