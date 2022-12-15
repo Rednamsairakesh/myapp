@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -12,6 +11,15 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { GpayComponent } from './gpay/gpay.component';
+import { ProductComponent } from './product/product.component';
+import {HttpClientModule} from '@angular/common/http';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { SbibankComponent } from './sbibank/sbibank.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { MailComponent } from './mail/mail.component';
+import { BoredomComponent } from './boredom/boredom.component';
+
 
 @NgModule({
   declarations: [
@@ -23,13 +31,20 @@ import { DirectivesComponent } from './directives/directives.component';
     HomeComponent,
     DataBindingComponent,
     RectangleComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    GpayComponent,
+    ProductComponent,
+    VehicleComponent,
+    SbibankComponent,
+    FlipkartComponent,
+    MailComponent,
+    BoredomComponent, 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
