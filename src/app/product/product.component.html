@@ -1,0 +1,22 @@
+<button (click)="sort()">sort by name</button>
+<button (click)="plth()">price low to high</button>
+
+<table border="2">
+    <thead>
+        <tr>
+            <th *ngFor="let key of keys">{{key | uppercase}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of product">
+            <td>{{product.brand}}</td>
+            <td>{{product.processor}}</td>
+            <td>{{product.ram}}</td>
+            <td>{{product.graphics}}</td>
+            <td>{{product.HDD}}</td>
+            <td>{{product.SSD}}</td>
+            <td>{{product.price}}</td>
+        </tr>
+        
+    </tbody>
+</table>
