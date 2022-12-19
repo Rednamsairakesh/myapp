@@ -8,7 +8,14 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent {
  
-  constructor(private _router:Router){}
+  constructor(private _router:Router){
+
+    document.addEventListener("visibilitychange", function() {
+      sessionStorage.removeItem('my-app-token');
+      _router.navigateByUrl("/login");
+    });
+
+  }
   logout(){
     sessionStorage.removeItem('my-app-token');
     this._router.navigateByUrl("/login");

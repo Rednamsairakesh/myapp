@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthenticationGuard } from './authentication.guard';
 import { BoredomComponent } from './boredom/boredom.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
@@ -19,20 +20,20 @@ import { VehicleComponent } from './vehicle/vehicle.component';
 
 const routes: Routes = [
   {path:'login', component: LoginComponent},
-  {path:'dashboard', component: DashboardComponent,
-  children:[{path:'home', component:HomeComponent},
-           {path:'calculator', component: CalculatorComponent},
-           {path:'databinding', component:DataBindingComponent},
-           {path:'rectangle', component:RectangleComponent},
-           {path:'directives', component:DirectivesComponent},
-           {path:'gpay', component:GpayComponent},
-           {path:'product', component:ProductComponent}, 
-           {path:'vehicle', component:VehicleComponent},
-           {path:'sbibank', component:SbibankComponent},
-           {path:'flipkart', component:FlipkartComponent},
-           {path:'mail', component:MailComponent},
-           {path:'boredom', component:BoredomComponent},
-           {path:'create-vehicle', component:CreateVehicleComponent},
+  {path:'dashboard', component: DashboardComponent, canActivate:[AuthenticationGuard], children:[
+          {path:'home', component:HomeComponent},
+          {path:'calculator', component: CalculatorComponent},
+          {path:'databinding', component:DataBindingComponent},
+          {path:'rectangle', component:RectangleComponent},
+          {path:'directives', component:DirectivesComponent},
+          {path:'gpay', component:GpayComponent},
+          {path:'product', component:ProductComponent}, 
+          {path:'vehicle', component:VehicleComponent},
+          {path:'sbibank', component:SbibankComponent},
+          {path:'flipkart', component:FlipkartComponent},
+          {path:'mail', component:MailComponent},
+          {path:'boredom', component:BoredomComponent},
+          {path:'create-vehicle', component:CreateVehicleComponent},
           ]},
   {path:'', component: LoginComponent},
   {path:'**', component: PagenotfoundComponent},
