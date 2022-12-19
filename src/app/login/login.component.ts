@@ -24,6 +24,7 @@ export class LoginComponent {
     this._loginService.login(this.loginForm.value).subscribe(
       (data:any)=>{
         alert("login success");
+        sessionStorage.setItem('my-app-token',data.token);
         this._router.navigateByUrl("/dashboard");
       },
       (err:any)=>{
