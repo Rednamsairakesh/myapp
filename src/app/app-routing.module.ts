@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthenticationGuard } from './authentication.guard';
 import { BoredomComponent } from './boredom/boredom.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
@@ -34,6 +35,7 @@ const routes: Routes = [
           {path:'mail', component:MailComponent},
           {path:'boredom', component:BoredomComponent},
           {path:'create-vehicle', component:CreateVehicleComponent},
+          {path:'create-student', component:CreateStudentComponent},
           ]},
   {path:'', component: LoginComponent},
   {path:'**', component: PagenotfoundComponent},

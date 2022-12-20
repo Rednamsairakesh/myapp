@@ -1,0 +1,66 @@
+<form [formGroup]="studentForm">
+    <label for="">Name</label>
+    <input formControlName="name" type="text">
+    <br>
+    <label for="">Phone</label>
+    <input formControlName="phone" type="number">
+    <br>
+    <label for="">Email</label>
+    <input formControlName="email" type="email">
+    <br>
+    <div formGroupName="address">
+        <label for="">City</label>
+        <input type="text" formControlName="city">
+        <br>
+        <label for="">State</label>
+        <input type="text" formControlName="state">
+        <br>
+        <label for="">Pin</label>
+        <input type="number" formControlName="pin">
+        <br>
+    </div>
+    <div formArrayName="cards">
+        <div *ngFor="let card of cardsFormArray.controls; let i=index">
+            <div formGroupName="{{i}}">
+                <h3>Enter card details{{i+1}}</h3>
+                <label for="">Number</label>
+                <input type="number" formControlName="number">
+                <br>
+                <label for="">Expiry</label>
+                <input type="month" formControlName="expiry">
+                <br>
+                <label for="">CVV</label>
+                <input type="number" formControlName="cvv">
+                <br>
+                <button (click)="delete(i)">Delete</button>
+            </div>
+        </div>
+    </div>
+    <button (click)="add()" >Add Card</button>
+    <br>
+
+        <label for="" formControlName="type">Type</label>
+
+        <input name="type" type="radio" formControlName="type" value="dayscholar" >
+        <label for="res" >Day Scholar</label>
+
+
+        <input name="type" type="radio" formControlName="type" value="residential">
+        <label for="day" >Residential</label>
+        <br>
+
+    <div *ngIf="studentForm.get('type')?.value =='dayscholar'">
+        <label for="">Bus Fee:</label>
+        <input type="number" formControlName="busFee">
+        <br>
+    </div>
+    <div *ngIf="studentForm.get('type')?.value =='residential'">
+        <label for="">Hostel Fee:</label>
+        <input type="number" formControlName="hostelFee">
+        <br>
+    </div>
+
+
+    <button (click)="submit()" >Submit</button>
+
+</form>
