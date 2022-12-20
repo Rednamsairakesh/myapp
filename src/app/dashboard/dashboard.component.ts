@@ -10,10 +10,10 @@ export class DashboardComponent {
  
   constructor(private _router:Router){
 
-    document.addEventListener("visibilitychange", function() {
-      sessionStorage.removeItem('my-app-token');
-      _router.navigateByUrl("/login");
-    });
+    // document.addEventListener("visibilitychange", function() {
+    //   sessionStorage.removeItem('my-app-token');
+    //   _router.navigateByUrl("/login");
+    // });
 
   }
   logout(){
