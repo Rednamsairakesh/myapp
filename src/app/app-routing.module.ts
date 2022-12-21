@@ -8,6 +8,7 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { GpayComponent } from './gpay/gpay.component';
 import { HomeComponent } from './home/home.component';
@@ -36,6 +37,7 @@ const routes: Routes = [
           {path:'boredom', component:BoredomComponent},
           {path:'create-vehicle', component:CreateVehicleComponent},
           {path:'create-student', component:CreateStudentComponent},
+          {path:'employee-form', component:EmployeeFormComponent},
           ]},
   {path:'', component: LoginComponent},
   {path:'**', component: PagenotfoundComponent},

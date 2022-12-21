@@ -21,6 +21,7 @@ import { MailComponent } from './mail/mail.component';
 import { BoredomComponent } from './boredom/boredom.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
+import { EmployeeFormComponent } from './employee-form/employee-form.component';
 
 
 
@@ -44,6 +45,7 @@ import { CreateStudentComponent } from './create-student/create-student.componen
     BoredomComponent,
     CreateVehicleComponent,
     CreateStudentComponent,
+    EmployeeFormComponent,
     
   ],
   imports: [
