@@ -14,10 +14,12 @@ import { GpayComponent } from './gpay/gpay.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MailComponent } from './mail/mail.component';
+import { NotifyGuard } from './notify.guard';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProductComponent } from './product/product.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { SbibankComponent } from './sbibank/sbibank.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 
 const routes: Routes = [
@@ -36,8 +38,10 @@ const routes: Routes = [
           {path:'mail', component:MailComponent},
           {path:'boredom', component:BoredomComponent},
           {path:'create-vehicle', component:CreateVehicleComponent},
-          {path:'create-student', component:CreateStudentComponent},
+          {path:'create-student', component:CreateStudentComponent, canDeactivate:[NotifyGuard]},
           {path:'employee-form', component:EmployeeFormComponent},
+          {path:'vehicle-details/:id', component:VehicleDetailsComponent},
+          {path:'edit-vehicle/:id', component:CreateVehicleComponent },
           ]},
   {path:'', component: LoginComponent},
   {path:'**', component: PagenotfoundComponent},
