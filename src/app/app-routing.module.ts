@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { BoredomComponent } from './boredom/boredom.component';
 import { CalculatorComponent } from './calculator/calculator.component';
@@ -42,6 +43,11 @@ const routes: Routes = [
           {path:'employee-form', component:EmployeeFormComponent},
           {path:'vehicle-details/:id', component:VehicleDetailsComponent},
           {path:'edit-vehicle/:id', component:CreateVehicleComponent },
+          {path: 'about-company', component:AboutCompanyComponent},
+          {
+            path: 'contact-us',
+            loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
+          }
           ]},
   {path:'', component: LoginComponent},
   {path:'**', component: PagenotfoundComponent},
