@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NoPreloading, PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { BoredomComponent } from './boredom/boredom.component';
@@ -55,7 +55,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {preloadingStrategy:NoPreloading})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
