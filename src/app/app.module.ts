@@ -25,6 +25,8 @@ import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { AboutUsModule } from './about-us/about-us.module';
 import { StarsComponent } from './stars/stars.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildrenComponent } from './children/children.component';
 
 
 
@@ -51,6 +53,8 @@ import { StarsComponent } from './stars/stars.component';
     EmployeeFormComponent,
     VehicleDetailsComponent,
     StarsComponent,
+    ParentComponent,
+    ChildrenComponent,
     
   ],
   imports: [
