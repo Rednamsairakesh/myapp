@@ -24,6 +24,7 @@ import { CreateStudentComponent } from './create-student/create-student.componen
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { AboutUsModule } from './about-us/about-us.module';
+import { StarsComponent } from './stars/stars.component';
 
 
 
@@ -49,6 +50,7 @@ import { AboutUsModule } from './about-us/about-us.module';
     CreateStudentComponent,
     EmployeeFormComponent,
     VehicleDetailsComponent,
+    StarsComponent,
     
   ],
   imports: [

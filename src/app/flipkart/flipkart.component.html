@@ -8,6 +8,9 @@
         <h3>{{ flipkart.price }}</h3>
         <h3>{{ flipkart.description }}</h3>
         <h3>{{ flipkart.category }}</h3>
+        <h3>
+            <app-stars [rating]=" flipkart.rating.rate "></app-stars>
+        </h3>
         <h3>{{ flipkart.rating.rate }}</h3>
         <h3>{{ flipkart.rating.count }}</h3>
     </div>
