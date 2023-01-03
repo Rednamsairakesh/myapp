@@ -9,7 +9,12 @@
         <h3>{{ flipkart.description }}</h3>
         <h3>{{ flipkart.category }}</h3>
         <h3>
-            <app-stars [rating]=" flipkart.rating.rate "></app-stars>
+            <!-- parent to child -->
+            <app-stars [rating]=" flipkart.rating.rate ">
+                <!-- content projection -->
+                <p>Out of {{ flipkart.rating.count }} reviews</p>
+                
+            </app-stars>
         </h3>
         <h3>{{ flipkart.rating.rate }}</h3>
         <h3>{{ flipkart.rating.count }}</h3>
