@@ -21,6 +21,8 @@ import { ParentComponent } from './parent/parent.component';
 import { ProductComponent } from './product/product.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { SbibankComponent } from './sbibank/sbibank.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 
@@ -50,6 +52,8 @@ const routes: Routes = [
             loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
           },
           {path:'parent', component:ParentComponent},
+          {path:'sibling1', component:Sibling1Component},
+          {path:'sibling2', component:Sibling2Component},
         ]},
   {path:'', component: LoginComponent},
   {path:'**', component: PagenotfoundComponent},
