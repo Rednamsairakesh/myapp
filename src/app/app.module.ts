@@ -31,6 +31,7 @@ import { Sibling1Component } from './sibling1/sibling1.component';
 import { Sibling2Component } from './sibling2/sibling2.component';
 import { PricePipe } from './price.pipe';
 import { AgePipe } from './age.pipe';
+import { ImpDirective } from './imp.directive';
 
 
 
@@ -63,6 +64,7 @@ import { AgePipe } from './age.pipe';
     Sibling2Component,
     PricePipe,
     AgePipe,
+    ImpDirective,
     
   ],
   imports: [
