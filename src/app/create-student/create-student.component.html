@@ -28,11 +28,12 @@
     <br>
 
     <label for="">Email</label>
-    <input formControlName="email" type="email">
+    <input formControlName="email" type="text">
     
-    <div class="error" *ngIf="studentForm.get('email')?.touched && studentForm.get('name')?.invalid">
+    <div class="error" *ngIf="studentForm.get('email')?.touched && studentForm.get('email')?.invalid">
         <p *ngIf="studentForm.get('email')?.errors?.['required']">Email is required</p>
         <p *ngIf="studentForm.get('email')?.errors?.['email']">Enter valid email id.</p>
+        <p *ngIf="studentForm.get('email')?.errors?.['emailDomain']">Email should contain @capgemini.com</p>
     </div>
     <br>
     <div formGroupName="address">
