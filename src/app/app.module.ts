@@ -13,7 +13,7 @@ import { RectangleComponent } from './rectangle/rectangle.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { GpayComponent } from './gpay/gpay.component';
 import { ProductComponent } from './product/product.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { SbibankComponent } from './sbibank/sbibank.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
@@ -32,6 +32,7 @@ import { Sibling2Component } from './sibling2/sibling2.component';
 import { PricePipe } from './price.pipe';
 import { AgePipe } from './age.pipe';
 import { ImpDirective } from './imp.directive';
+import { TokenInterceptor } from './token.interceptor';
 
 
 
@@ -75,7 +76,13 @@ import { ImpDirective } from './imp.directive';
     ReactiveFormsModule,
     AboutUsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
