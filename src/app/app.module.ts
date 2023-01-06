@@ -33,6 +33,7 @@ import { PricePipe } from './price.pipe';
 import { AgePipe } from './age.pipe';
 import { ImpDirective } from './imp.directive';
 import { TokenInterceptor } from './token.interceptor';
+import { HooksComponent } from './hooks/hooks.component';
 
 
 
@@ -66,6 +67,7 @@ import { TokenInterceptor } from './token.interceptor';
     PricePipe,
     AgePipe,
     ImpDirective,
+    HooksComponent,
     
   ],
   imports: [
